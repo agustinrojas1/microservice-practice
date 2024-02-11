@@ -31,6 +31,11 @@ namespace PaymentAuthorization.Api.AsyncDataServices
 
                 _channel.ExchangeDeclare(exchange: "trigger", type: ExchangeType.Fanout);
 
+                _channel.QueueDeclare("payment_authorization_queue", durable: true, exclusive: false, autoDelete: false, arguments: null);
+
+                // Enlazar la cola al exchange "trigger"
+                _channel.QueueBind("payment_authorization_queue", "trigger", "");
+
                 _connection.ConnectionShutdown += RabbitMQConnectionShutDown;
 
                 Console.WriteLine("Connected to Message Bus");

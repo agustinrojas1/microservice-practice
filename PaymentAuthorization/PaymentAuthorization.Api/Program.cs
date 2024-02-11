@@ -1,4 +1,5 @@
 using PaymentAuthorization.Api.AsyncDataServices;
+using PaymentAuthorization.Api.Data.Repository;
 using PaymentAuthorization.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IPaymentAuthorizationService, PaymentAuthorizationService>();
 builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
+builder.Services.AddSingleton<IPaymentAuthorizationRepository, PaymentAuthorizationRepository>();
 
 var app = builder.Build();
 
@@ -22,7 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
