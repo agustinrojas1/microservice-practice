@@ -30,7 +30,7 @@ namespace PaymentAuthorization.Api.Controllers
             var response = await _authorizationService.AuthorizePaymentAsync(paymentRequest);
             
 
-            return Ok();
+            return Ok(response);
         }
     }
 }

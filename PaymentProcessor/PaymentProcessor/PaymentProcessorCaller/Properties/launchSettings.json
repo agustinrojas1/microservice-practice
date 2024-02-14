@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PaymentProcessorCaller": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\Documents\\Thonny\\challenge-geopagos\\PaymentProcessor\\PaymentProcessor\\PaymentProcessorCaller"
+    }
+  }
+}

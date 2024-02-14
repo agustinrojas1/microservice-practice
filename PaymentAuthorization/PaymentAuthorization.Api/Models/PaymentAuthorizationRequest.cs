@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public int ClientId { get; set; }
-        public decimal Amount { get; set; }
+        public string Amount { get; set; }
         public DateTime CreatedDate { get; set; }        
 
     }

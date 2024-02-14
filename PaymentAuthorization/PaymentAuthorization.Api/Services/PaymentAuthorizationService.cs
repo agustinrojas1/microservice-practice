@@ -1,4 +1,4 @@
-﻿using PaymentAuthorization.Api.AsyncDataServices;
+﻿using PaymentAuthorization.Api.AsyncDataServices.Publisher;
 using PaymentAuthorization.Api.Models;
 using PaymentAuthorization.Api.Models.Enums;
 
@@ -7,9 +7,9 @@ namespace PaymentAuthorization.Api.Services
 
     public class PaymentAuthorizationService : IPaymentAuthorizationService
     {
-        private readonly IMessageBusClient _messageBusClient;
+        private readonly IMessageBusPublisherClient _messageBusClient;
 
-        public PaymentAuthorizationService(IMessageBusClient messageBusClient)
+        public PaymentAuthorizationService(IMessageBusPublisherClient messageBusClient)
         {
             _messageBusClient = messageBusClient;
         }
@@ -17,9 +17,9 @@ namespace PaymentAuthorization.Api.Services
         public async Task<PaymentAuthorizationResponse> AuthorizePaymentAsync(PaymentAuthorizationRequest paymentRequest)
         {
             //enviar autorización a message bus
-             _messageBusClient.PublishNewAuthorization(paymentRequest);
+             await _messageBusClient.PublishNewAuthorization(paymentRequest);
             
-            return new PaymentAuthorizationResponse { Id = paymentRequest.Id, Status = AuthorizationStatusEnum.Pending }; 
+            return new PaymentAuthorizationResponse { Id = paymentRequest.Id, Status = AuthorizationStatusEnum.Pending, Message = "Your payment authorization has been sent. Please wait for the confirmation." }; 
         }
     }
 }
