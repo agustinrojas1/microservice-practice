@@ -32,5 +32,8 @@ namespace PaymentAuthorization.Api.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet]
+        public async Task<Auto>
     }
 }
