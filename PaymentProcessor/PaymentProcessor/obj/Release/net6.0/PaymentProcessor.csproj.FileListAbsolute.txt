@@ -1,0 +1,13 @@
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\bin\Release\net6.0\PaymentProcessor.deps.json
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\bin\Release\net6.0\PaymentProcessor.dll
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\bin\Release\net6.0\PaymentProcessor.pdb
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.csproj.AssemblyReference.cache
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.AssemblyInfoInputs.cache
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.AssemblyInfo.cs
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.csproj.CoreCompileInputs.cache
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.sourcelink.json
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.dll
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\refint\PaymentProcessor.dll
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\PaymentProcessor.pdb
+D:\Documents\Thonny\challenge-geopagos\PaymentProcessor\PaymentProcessor\PaymentProcessor\obj\Release\net6.0\ref\PaymentProcessor.dll

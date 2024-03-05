@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "xDduE4bTAP39MuVoIcK98+u9vrCve5UNfacEu5gmvFI=",
+  "Source": "PaymentAuthorization.Api",
+  "BasePath": "_content/PaymentAuthorization.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

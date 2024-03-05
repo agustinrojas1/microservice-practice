@@ -1,0 +1,38 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    volumes:
+      - ./rabbitMQVol/data/:/var/lib/rabbitmq/
+      - ./rabbitMQVol/log/:/var/log/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    container_name: "rabbitmq"
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./sqlserver/persistency:/var/opt/mssql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password123!
+      - MSSQL_TCPIP_ENABLED=1
+    container_name: "sqlserver"
+  api:
+    build: ./PaymentAuthorization/PaymentAuthorization.Api
+    volumes:
+      - ./PaymentAuthorization/PaymentAuthorization.Api/appsettings.Development.json:/appsettings.Development
+    ports:
+      - "7212:7212"
+    depends_on:
+      - rabbitmq
+    container_name: "api"
+  processor:
+    build: ./PaymentProcessor/
+    volumes:
+      - ./PaymentProcessor/PaymentProcessorCaller/appsettings.json:/app/appsettings.json
+    depends_on:
+      - rabbitmq
+    container_name: "processor"

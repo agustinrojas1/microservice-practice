@@ -1,4 +1,5 @@
-﻿namespace PaymentAuthorization.Api.Models.Enums
+﻿
+namespace PaymentAuthorization.Api.Models.Enums
 {
     public enum AuthorizationStatusEnum
     {

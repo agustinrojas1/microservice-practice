@@ -1,0 +1,2 @@
+VHOST: /
+QUEUE: payment_authorization_response_queue
